@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exploración espacial · Sistema Solar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/estilos.css" rel="stylesheet">
+</head>
+<body data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg bg-dark border-bottom border-secondary sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">&#9737; Sistema Solar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="pagina1.html">Pagina 1</a></li>
+          <li class="nav-item"><a class="nav-link" href="pagina2.html">Pagina 2</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="pagina3.html">Pagina 3</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="encabezado-pagina">
+      <span class="badge text-bg-warning mb-2">Pagina 3</span>
+      <h1 class="display-4 fw-bold">Exploración espacial</h1>
+      <p class="lead">Todo lo que sabemos de los planetas lo aprendimos gracias a cohetes, sondas y astronautas.</p>
+    </section>
+
+    <div class="row align-items-center g-4 my-4">
+      <div class="col-md-6"><img src="img/cohete.jpg" class="img-redondeada" alt="Ilustración de un cohete despegando de la Tierra"></div>
+      <div class="col-md-6">
+        <p>En 1957 la Unión Soviética lanzó el Sputnik 1, el primer satélite artificial. Apenas cuatro años después, Yuri Gagarin se convirtió en el primer ser humano en orbitar la Tierra.</p>
+        <p>En 1969, la misión Apolo 11 llevó a Neil Armstrong y Buzz Aldrin a caminar sobre la Luna. Hasta hoy, solo doce personas han pisado su superficie.</p>
+      </div>
+    </div>
+
+    <div class="row align-items-center g-4 my-4 flex-md-row-reverse">
+      <div class="col-md-6"><img src="img/luna.jpg" class="img-redondeada" alt="Ilustración de una bandera en la superficie lunar"></div>
+      <div class="col-md-6">
+        <p>Las sondas Voyager 1 y 2, lanzadas en 1977, visitaron los planetas exteriores y hoy viajan por el espacio interestelar. Siguen enviando datos casi 50 años después.</p>
+        <!-- Componente Bootstrap 1: Botón que abre un modal -->
+        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalVoyager">Ver el mensaje de las Voyager</button>
+      </div>
+    </div>
+
+    <!-- Componente Bootstrap 2: Modal -->
+    <div class="modal fade" id="modalVoyager" tabindex="-1" aria-labelledby="tituloModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="tituloModal">El Disco de Oro</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <img src="img/satelite.jpg" class="img-redondeada mb-3" alt="Ilustración de una sonda espacial">
+            Cada sonda Voyager lleva un disco con sonidos e imágenes de la Tierra: saludos en 55 idiomas, música de distintas culturas y sonidos de la naturaleza, por si alguna civilización lo encuentra.
+          </div>
+          <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Componente Bootstrap 3: Lista agrupada con insignias -->
+    <h2 class="mt-5 mb-3">Línea del tiempo</h2>
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">Sputnik 1, primer satélite artificial<span class="badge text-bg-warning rounded-pill">1957</span></li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">Yuri Gagarin orbita la Tierra<span class="badge text-bg-warning rounded-pill">1961</span></li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">Apolo 11 llega a la Luna<span class="badge text-bg-warning rounded-pill">1969</span></li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">Lanzamiento de las Voyager<span class="badge text-bg-warning rounded-pill">1977</span></li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">Telescopio James Webb<span class="badge text-bg-warning rounded-pill">2021</span></li>
+    </ul>
+  </main>
+
+  <footer class="py-4 mt-5">
+    <div class="container small">Laboratorio 6 · Programación Web · FIME UANL</div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planetas rocosos · Sistema Solar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/estilos.css" rel="stylesheet">
+</head>
+<body data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg bg-dark border-bottom border-secondary sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">&#9737; Sistema Solar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="pagina1.html">Pagina 1</a></li>
+          <li class="nav-item"><a class="nav-link" href="pagina2.html">Pagina 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="pagina3.html">Pagina 3</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="encabezado-pagina">
+      <span class="badge text-bg-warning mb-2">Pagina 1</span>
+      <h1 class="display-4 fw-bold">Planetas rocosos</h1>
+      <p class="lead">Los cuatro mundos más cercanos al Sol tienen superficie sólida, núcleo metálico y pocas o ninguna luna.</p>
+    </section>
+
+    <!-- Componente Bootstrap 1: Carrusel -->
+    <div id="carruselRocosos" class="carousel slide my-5" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carruselRocosos" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Mercurio"></button>
+        <button type="button" data-bs-target="#carruselRocosos" data-bs-slide-to="1" aria-label="Venus"></button>
+        <button type="button" data-bs-target="#carruselRocosos" data-bs-slide-to="2" aria-label="Marte"></button>
+      </div>
+      <div class="carousel-inner rounded-4">
+        <div class="carousel-item active">
+          <img src="img/mercurio.jpg" class="d-block w-100" alt="Ilustración de Mercurio">
+          <div class="carousel-caption"><h5>Mercurio</h5><p>El más pequeño y el más cercano al Sol.</p></div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/venus.jpg" class="d-block w-100" alt="Ilustración de Venus">
+          <div class="carousel-caption"><h5>Venus</h5><p>El más caliente, por su efecto invernadero.</p></div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/marte.jpg" class="d-block w-100" alt="Ilustración de Marte">
+          <div class="carousel-caption"><h5>Marte</h5><p>El planeta rojo, objetivo de futuras misiones tripuladas.</p></div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carruselRocosos" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carruselRocosos" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+
+    <p>Mercurio no tiene una atmósfera que retenga el calor, así que su temperatura pasa de más de 400 °C durante el día a cerca de −180 °C por la noche. Su superficie está cubierta de cráteres, muy parecida a la de nuestra Luna.</p>
+    <p>Venus tiene casi el mismo tamaño que la Tierra, pero su densa atmósfera de dióxido de carbono atrapa el calor y lo convierte en el planeta más caliente del Sistema Solar. Además, gira en sentido contrario al de la mayoría de los planetas.</p>
+    <p>Marte conserva huellas de antiguos ríos y lagos, y en sus polos hay hielo de agua. Por eso es el destino favorito de los robots exploradores y el principal candidato para una futura base humana.</p>
+
+    <!-- Componente Bootstrap 2: Acordeón -->
+    <h2 class="mt-5 mb-3">Datos rápidos</h2>
+    <div class="accordion" id="acordeonDatos">
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#dato1" aria-expanded="true" aria-controls="dato1">¿Cuánto dura un día en Venus?</button></h3>
+        <div id="dato1" class="accordion-collapse collapse show" data-bs-parent="#acordeonDatos"><div class="accordion-body">Un día en Venus (243 días terrestres) dura más que su año (225 días terrestres).</div></div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dato2" aria-expanded="false" aria-controls="dato2">¿Cuál es el volcán más alto?</button></h3>
+        <div id="dato2" class="accordion-collapse collapse" data-bs-parent="#acordeonDatos"><div class="accordion-body">El Monte Olimpo, en Marte, mide unos 22 km de altura: casi tres veces el Everest.</div></div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dato3" aria-expanded="false" aria-controls="dato3">¿Mercurio tiene lunas?</button></h3>
+        <div id="dato3" class="accordion-collapse collapse" data-bs-parent="#acordeonDatos"><div class="accordion-body">No. Mercurio y Venus son los únicos planetas sin lunas.</div></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-4 mt-5">
+    <div class="container small">Laboratorio 6 · Programación Web · FIME UANL</div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
